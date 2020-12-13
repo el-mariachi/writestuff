@@ -1,0 +1,41 @@
+@import 'header';
+@import 'content';
+@import 'footer';
+@import 'social';
+
+
+/* page */
+
+html {
+  
+}
+
+.page {
+  min-height: 100%;
+  margin: 0;
+  position: relative;
+  display: grid;
+  grid-template-rows: 94px minmax(calc(100vh - 174px), max-content) 48px;
+  grid-gap: 16px;
+  grid-template-areas: 
+  "header"
+  "content"
+  "footer";
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  font-style: normal;
+}
+
+.outline {
+  position: absolute;
+  left: -9999em;
+}
+
+.back-to-top {
+  position: fixed;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}

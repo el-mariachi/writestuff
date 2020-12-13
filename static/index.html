@@ -4,12 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/index.js"></script>
     <title>writestuff</title>
 </head>
 
-<body>
-    <h1>Hello</h1>
+<body class="page">
+    <header class="header">
+        <div class="header__upper">
+            <a href="/" class="header__logo"></a>
+            <div class="menu header__menu">
+                <form name="search" class="search menu__search">
+                    <input type="text" name="searchinput" id="" class="input search__input" placeholder="Search">
+                </form>
+                <div class="burger menu__burger">
+                    <div class="burger__layer"></div>
+                </div>
+                <nav class="menu__frame">
+                    <h2 class="outline">Main navigation</h2>
+                    <ul class="menu__body">
+                        <li class="menu__item">
+                            <h3 class="menu__heading"><a href="#" class="menu__link link">
+                                    Home
+                                </a></h3>
+                        </li>
+                        <li class="menu__item">
+                            <h3 class="menu__heading"><a href="#" class="menu__link link">
+                                    Ratings
+                                </a></h3>
+                        </li>
+                        <li class="menu__item">
+                            <h3 class="menu__heading"><a href="#" class="menu__link link">
+                                    Interesting
+                                </a></h3>
+                        </li>
+                        <li class="menu__item menu--create">
+                            <h3 class="menu__heading"><a href="#" class="menu__link link">
+                                    Create blog
+                                </a></h3>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <nav class="categories header__lower">
+            <h2 class="outline">Categories</h2>
+            <button class="categories__button categories--scroll-back">
+                <div class="categories__arrow"></div>
+            </button>
+            <ul class="categories__body">
+                <li class="categories__item">
+                    <h3 class="categories__heading"><a href="#" class="categories__link link">Covid</a></h3>
+                </li>
+                <li class="categories__item">
+                    <h3 class="categories__heading"><a href="#" class="categories__link link">Education</a></h3>
+                </li>
+                <li class="categories__item">
+                    <h3 class="categories__heading"><a href="#" class="categories__link link">Books</a></h3>
+                </li>
+                <li class="categories__item">
+                    <h3 class="categories__heading"><a href="#" class="categories__link link">Cinema</a></h3>
+                </li>
+                <li class="categories__item">
+                    <h3 class="categories__heading"><a href="#" class="categories__link link">History</a></h3>
+                </li>
+                <li class="categories__item">
+                    <h3 class="categories__heading"><a href="#" class="categories__link link">History</a></h3>
+                </li>
+                <li class="categories__item">
+                    <h3 class="categories__heading"><a href="#" class="categories__link link">Kids</a></h3>
+                </li>
+                <li class="categories__item">
+                    <h3 class="categories__heading"><a href="#" class="categories__link link">Politics</a></h3>
+                </li>
+                <li class="categories__item">
+                    <h3 class="categories__heading"><a href="#" class="categories__link link">Travel</a></h3>
+                </li>
+                <li class="categories__item">
+                    <h3 class="categories__heading"><a href="#"
+                            class="categories__link link">Home&nbsp;&amp;&nbsp;Family</a>
+                    </h3>
+                </li>
+                <li class="categories__item">
+                    <h3 class="categories__heading"><a href="#" class="categories__link link">Medicine</a></h3>
+                </li>
+                <li class="categories__item">
+                    <h3 class="categories__heading"><a href="#"
+                            class="categories__link link">Cars&nbsp;&amp;&nbsp;Motorcycles</a></h3>
+                </li>
+            </ul>
+            <button class="categories__button categories--scroll-forward">
+                <div class="categories__arrow"></div>
+            </button>
+        </nav>
+    </header>
+    <main class="content">
+        <h1>content</h1>
+    </main>
+    <footer class="footer">
+        <div class="social">
+            <a href="#" class="social__link link social--type-follow social--target-fb"></a>
+            <a href="#" class="social__link link social--type-follow social--target-tw"></a>
+            <a href="#" class="social__link link social--type-follow social--target-in"></a>
+        </div>
+        <div class="copyright">&copy; Copyright <br>writestuff 2020</div>
+    </footer>
+    <div class="back-to-top"></div>
 </body>
 
 </html>

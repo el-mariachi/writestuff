@@ -1,0 +1,39 @@
+.social {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 116px;
+}
+
+.social__link {
+    width: 28px;
+    height: 28px;
+    background-image: url(../img/sprites_28.svg);
+    background-repeat: no-repeat;
+    background-size: 150px auto;
+}
+
+.social--type-follow {
+    background-position-x: -100px;
+}
+
+.social--type-follow:hover {
+    background-position-x: -50px; 
+}
+
+.social--target-fb {
+    background-position-y: 0px;
+}
+
+.social--target-tw {
+    background-position-y: -50px;
+}
+
+.social--target-in {
+    background-position-y: -100px;
+}
+
+@media screen and (min-width: 1020px) {
+    
+}
