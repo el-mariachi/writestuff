@@ -17,25 +17,32 @@ function init() {
     let bodyRect;
     let bodyShouldStartAt;
     let bodyShouldEndtAt;
-
+    let offsetMax;
     let scrollIntervalID;
+    // let stillMoving;
 
     const scrollBody = function (offset) {
-        const left = categoriesBody.style.left || getComputedStyle(categoriesBody).left;
+        const left = getComputedStyle(categoriesBody).left;
         const currentOffset = parseInt(left, 10);
-        const newOffset = currentOffset + offset;
+        let newOffset = Math.min(0, currentOffset + offset); // newOffset should be <= 0
+        newOffset = Math.max(newOffset, offsetMax); // the other limit for offset
 
-        bodyRect = categoriesBody.getBoundingClientRect();
-        if ((offset > 0 && bodyRect.left > bodyShouldStartAt) || (offset < 0 && bodyRect.right < bodyShouldEndtAt)) {
-            return;
-        }
+        // bodyRect = categoriesBody.getBoundingClientRect();
+        // if ((offset > 0 && bodyRect.left > bodyShouldStartAt) || (offset < 0 && bodyRect.right < bodyShouldEndtAt)) {
+        //     return;
+        // }
 
         categoriesBody.style.left = `${newOffset}px`;
+        // stillMoving = false;
     }
-    const finishScroll = function (ev) {
+    const finishScroll = function () {
         clearInterval(scrollIntervalID);
     }
     const buttonHandler = function (ev) {
+        // if (stillMoving) {
+        //     return;
+        // }
+        // stillMoving = true;
         let offset = 0;
         if (this.classList.contains('categories--scroll-forward')) {
             offset = -10;
@@ -46,9 +53,9 @@ function init() {
         this.addEventListener('touchend', finishScroll);
         scrollIntervalID = setInterval(() => {
             scrollBody(offset);
-            setTimeout(() => {
-                clearInterval(scrollIntervalID);
-            }, 500); // safety catch
+            // setTimeout(() => {
+            //     clearInterval(scrollIntervalID);
+            // }, 1000); // safety catch
         }, 10);
 
     }
@@ -71,15 +78,18 @@ function init() {
         bodyRect = categoriesBody.getBoundingClientRect();
         bodyShouldStartAt = catRect.left + parseInt(getComputedStyle(categories).paddingLeft, 10);
         bodyShouldEndtAt = catRect.right - parseInt(getComputedStyle(categories).paddingRight, 10);
+        offsetMax = bodyShouldEndtAt - bodyShouldStartAt - bodyRect.width;
         if (bodyRect.left < bodyShouldStartAt) {
             activateButton(backButton);
         } else {
             deactivateButton(backButton);
+            finishScroll();
         }
         if (bodyRect.right > bodyShouldEndtAt) {
             activateButton(forwardButton);
         } else {
             deactivateButton(forwardButton);
+            finishScroll();
         }
     }
     categoriesBody.addEventListener('transitionend', activateButtons);
@@ -89,8 +99,3 @@ function init() {
 
 document.addEventListener('DOMContentLoaded', init);
 
-/* TODO
-implement movement
-stop movement when reached the end
-
-*/
