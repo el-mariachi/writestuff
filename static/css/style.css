@@ -2,6 +2,7 @@
 @import 'content';
 @import 'footer';
 @import 'social';
+@import 'card';
 
 
 /* page */
@@ -38,4 +39,15 @@ html {
 .link {
   text-decoration: none;
   color: inherit;
+}
+
+.cards {
+  box-sizing: border-box;
+  padding: 0 16px;
+  margin: -8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }

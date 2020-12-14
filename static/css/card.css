@@ -1,0 +1,38 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 288px;
+    height: 194px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    margin: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card__head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__cat {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #47bbfd;
+}
+
+.card__author {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #666;
+    margin: 6px 10px 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.card__avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}
