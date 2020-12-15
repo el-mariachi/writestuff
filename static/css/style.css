@@ -1,9 +1,9 @@
-@import 'header';
-@import 'content';
-@import 'footer';
-@import 'social';
-@import 'card';
-@import 'button';
+@import 'header.css';
+@import 'content.css';
+@import 'footer.css';
+@import 'social.css';
+@import 'card.css';
+@import 'button.css';
 
 
 /* page */
