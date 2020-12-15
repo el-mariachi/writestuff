@@ -1,6 +1,6 @@
-@import 'menu';
-@import 'burger';
-@import 'search';
+@import 'menu.css';
+@import 'burger.css';
+@import 'search.css';
 
 .header {
     grid-area: header;
