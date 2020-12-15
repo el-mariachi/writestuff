@@ -1,0 +1,91 @@
+@import 'header';
+@import 'content';
+@import 'footer';
+@import 'social';
+@import 'card';
+@import 'button';
+
+
+/* page */
+
+html {
+  
+}
+
+.page {
+  min-height: 100%;
+  margin: 0;
+  position: relative;
+  display: grid;
+  grid-template-rows: 94px minmax(calc(100vh - 174px), max-content) 48px;
+  grid-gap: 16px;
+  grid-template-areas: 
+  "header"
+  "content"
+  "footer";
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  font-style: normal;
+}
+
+.content {
+  padding: 0 16px;
+}
+
+.outline {
+  position: absolute;
+  left: -9999em;
+}
+
+.back-to-top {
+  position: fixed;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.reads {
+  color: #999;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+.reads::before {
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 7px;
+  background: url(../img/eye_gr_130x70.svg) no-repeat;
+  background-size: 13px 7px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.cards {
+  box-sizing: border-box;
+  width: min-content;
+  margin: 0 auto 16px;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: 288px;
+}
+
+@media screen and (min-width: 624px) {
+  .cards {
+    grid-template-columns: 288px 288px;
+  }
+}
+
+@media screen and (min-width: 928px) {
+  .cards {
+    grid-template-columns: 288px 288px 288px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
