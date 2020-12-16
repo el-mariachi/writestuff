@@ -130,10 +130,6 @@
     padding: 10px;
 }
 
-.post__quote::before {
-    
-}
-
 .post__quote::after {
     background-position-x: -50px;
 }

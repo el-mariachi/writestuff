@@ -10,10 +10,6 @@
 
 /* page */
 
-html {
-  
-}
-
 .page {
   min-height: 100%;
   margin: 0;
@@ -84,16 +80,11 @@ html {
   'blank';
 }
 
-.post {
-
-}
-
 .more {
   grid-area: post;
 }
 
 .continue {
-  /* font-size: 1.2em; */
   font-weight: normal;
   color: #0081c2;
 }
