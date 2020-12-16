@@ -1,0 +1,187 @@
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+.post__title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #000;
+    margin-top: 0;
+}
+
+.post__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.post__date {
+    font-size: 1.4em;
+    color: #999;
+}
+
+.post__reads {
+    font-size: 1.4em;
+    margin: 0 0 0 auto;
+}
+
+.post__size {
+    font-size: 1.4em;
+    margin-left: 10px;
+    color: #999;
+}
+
+.post__size::before {
+    content: '';
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 0.5em;
+    width: 1em;
+    height: 1em;
+    background: url(../img/watch_gr_70x70.svg) no-repeat;
+    background-size: contain;
+}
+
+.post__size::after {
+    content: ' min. read';
+}
+
+.post__cat {
+    width: 100%;
+    margin: 0.5em -16px;
+    padding: 4px 16px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #47bbfd;
+    background-color: #fbfbfb;
+    text-align: right;
+}
+
+.post__body {
+    font-size: 1.4em;
+    color: #000;
+    margin: 0.7em 0;
+}
+
+.post__subhead {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 0.6em;
+}
+
+.post--major {
+    font-size: 1.8em;
+}
+
+.post--minor {
+    font-size: 1.6em;
+}
+
+.post__ul {
+    font-size: 1.4em;
+    padding-inline-start: 16px;
+}
+
+.post__figure {
+    margin: 1em 0;
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post__image {
+    max-width: 100%;
+    max-height: 50em;
+    border-radius: 8px;
+}
+
+.post__caption {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 6px;
+}
+
+.post__quote {
+    font-size: 1.6em;
+    font-style: italic;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em;
+}
+
+.post__quote::before,
+.post__quote::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background-image: url(../img/sprites_28.svg);
+    background-repeat: no-repeat;
+    background-size: 150px auto;
+    background-position-y: -150px;
+    margin: 0.7em 0;
+    padding: 10px;
+}
+
+.post__quote::after {
+    background-position-x: -50px;
+}
+
+.post__byline {
+    font-size: 1.4em;
+    color: #666;
+    text-align: right;
+    margin-right: 46px;
+    margin-top: -1em;
+}
+
+.post__social {
+    margin: 1em 0 auto;
+    align-self: flex-end;
+}
+
+@media screen and (min-width: 760px) {
+    .post__reads {
+        margin: 0 0.5em 0 1em;
+    }
+
+    .post__size {
+        margin-right: auto;
+    }
+    .post__cat {
+        background-color: transparent;
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .post__cat::before {
+        content: 'Category: ';
+        color: #999;
+    }
+
+    .post__info {
+        margin-bottom: 36px;
+    }
+
+    .post__quote {
+        width: 70%;
+    }
+
+    .post__byline {
+        margin-right: calc(30% + 46px);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .post {
+        font-size: 1.14em;
+    }
+}

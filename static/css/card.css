@@ -50,6 +50,10 @@
     font-weight: normal;
 }
 
+.card__reads {
+    font-size: 1.2em;
+}
+
 .card__body {
     font-size: 1.4em;
     font-weight: normal;
@@ -64,16 +68,6 @@
 
 .card__continue {
     font-size: 1.2em;
-    font-weight: normal;
-    color: #0081c2;
-}
-
-.card__continue:visited {
-    color: #0081c2;
-}
-
-.card__continue:hover {
-    color: #c24100;
 }
 
 @media screen and (min-width: 1200px) {

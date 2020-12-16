@@ -103,7 +103,6 @@
   background-color: #fbfbfb;
   border-top: 1px solid #eaeaea;
   width: 100vw;
-  /* transition: right 0.2s ease-out; */
 }
 
 /* categories menu */
@@ -257,7 +256,6 @@
     color: #fff;
   }
 
-  /* categories menu */
 }
 
 @media screen and (min-width: 1020px) {
