@@ -67,6 +67,11 @@ function init() {
 
     const activateButton = function (button) {
         button.style.display = 'flex';
+        if (button.classList.contains('categories--scroll-forward')) {
+            // check for scrollbar
+            const scrollbarOffset = window.innerWidth - document.documentElement.clientWidth + 'px';
+            button.style.right = scrollbarOffset;
+        }
     }
 
     const deactivateButton = function (button) {

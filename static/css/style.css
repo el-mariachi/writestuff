@@ -4,6 +4,8 @@
 @import 'social.css';
 @import 'card.css';
 @import 'button.css';
+@import 'author.css';
+@import 'post.css';
 
 
 /* page */
@@ -49,19 +51,17 @@ html {
 
 .reads {
   color: #999;
-  font-size: 1.2em;
   font-weight: normal;
 }
 
 .reads::before {
   content: '';
   display: inline-block;
-  width: 13px;
-  height: 7px;
+  width: 1.2em;
+  height: 0.7em;
   background: url(../img/eye_gr_130x70.svg) no-repeat;
-  background-size: 13px 7px;
+  background-size: contain;
   margin-right: 4px;
-  vertical-align: middle;
 }
 
 .cards {
@@ -71,7 +71,39 @@ html {
   display: grid;
   grid-gap: 16px;
   grid-template-columns: 1fr;
-  /* grid-auto-rows: minmax(100px, auto); */
+}
+
+.blog {
+  margin-bottom: 3em;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 16px;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'aside'
+  'post'
+  'blank';
+}
+
+.post {
+
+}
+
+.more {
+  grid-area: post;
+}
+
+.continue {
+  /* font-size: 1.2em; */
+  font-weight: normal;
+  color: #0081c2;
+}
+
+.continue:visited {
+  color: #0081c2;
+}
+
+.continue:hover {
+  color: #c24100;
 }
 
 @media screen and (min-width: 624px) {
@@ -83,12 +115,30 @@ html {
 @media screen and (min-width: 928px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
-    /* width: calc(100vw - 32px); */
   }
+}
+
+@media screen and (min-width: 1020px) {
+  .content {
+    padding: 0 32px;
+  }
+
+  .blog {
+    grid-auto-flow: row;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 'aside post';
+  }
+
+
 }
 
 @media screen and (min-width: 1200px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .blog {
+    grid-template-columns: 200px 1fr 180px;
+    grid-template-areas: 'aside post blank';
   }
 }

@@ -18,8 +18,8 @@
     background-position-x: -100px;
 }
 
-.social--type-follow:hover {
-    background-position-x: -50px; 
+.social__link:hover {
+    background-position-x: -50px;
 }
 
 .social--target-fb {
