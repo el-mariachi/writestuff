@@ -2,7 +2,7 @@
 
 ### Udacity Front End Nanodegree project
 
-## Overmview
+## Overview
 
 A simple blog post website. The design shows two pages:
  - Index page
